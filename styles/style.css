@@ -1,0 +1,425 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    border: none;
+    scroll-behavior: smooth;
+    outline: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+:root{
+    --primario: rgb(162, 0, 0);
+    --secundario: #202020;
+    --terceario:#003366;
+    --gris: #404040;
+    --blanco: #fff;
+}
+header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    width: 100%;
+    background-color: transparent;
+    padding: 27px 17%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all .50s ease;
+}
+.logo{
+    font-size: 33px;
+    color: var(--blanco);
+    font-weight: 600;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+span{
+    color:  var(--primario);
+}
+.navbar{
+    display: flex;
+}
+.navbar a{
+    margin: 15px 20px;
+    transition: all .50s ease;
+    color: var(--blanco);
+}
+.navbar a:hover{
+    color: var(--primario)
+}
+.redes_sociales{
+    display: flex;
+    align-items: center;
+}
+.redes_sociales a:first-child{
+    color: var(--blanco);
+    font-size: .9em;
+    margin-right: 20px; 
+}
+.redes_sociales a{
+    vertical-align: middle;
+    font-size: 20px;
+    margin: 0 15px;
+    transition: all .50s ease;
+    color: var(--blanco);
+}
+.redes_sociales a:hover{
+    color: var(--primario);
+}
+#menu-icon{
+    cursor: pointer;
+    font-size: 30px;
+    z-index: 101;
+    display: none;
+}
+/*home*/
+section{
+    padding: 70px 17% 60px;
+}
+.home{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to left, rgba(0,0,0,0.6), rgba(0,0,0,0.3)), url(../images/fondo_pf.jpg);
+    background-size: cover;
+    background-position: bottom center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.home_text h2{
+    color:var(--primario);
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+}
+
+.home_text p{
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    color: var(--blanco);
+}
+.home_text img{
+    width: 220px;
+    padding: 0;
+}
+.btn{
+    display: inline-block;
+    padding: 10px 40px;
+    background-color: var(--primario);
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    transition: all .50s ease;
+    color: var(--blanco);
+}
+.btn:hover{
+    background-color: transparent;
+    border: 2px solid var(--primario);
+    color: var(--primario);
+}
+/*Features*/
+header.sticky{
+    padding: 8px 17%;
+    background: var(--gris);
+}
+.feature .content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+    align-items: center;
+    text-align: center;
+    gap: 3rem;
+}
+.feature .content .images{
+    overflow: hidden;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    border-radius: 50%;
+}
+.feature .content .images img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    background-position: center;
+    transition: transform 0.7s;
+}
+.feature .content .images img:hover{
+    transform: scale(1.2);
+}
+.feature .content h4{
+    font-size: 24px;
+    transition: all .50s ease;
+}
+.about, .to_sell{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 6rem;
+}
+.about_img, .to_sell_img{
+    width: 400px;
+    height: 450px;
+    overflow: hidden;
+}
+.about_img img, .to_sell_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-position: center;
+    border-radius: 5px;
+}
+.about_text h2 {
+    margin: 10px;
+}
+.about_text .btn {
+    margin: 10px;
+}
+.to_buy{
+    background-color: #202020;
+}
+.title{
+    text-align: center;
+}
+.title h2{
+    color: var(--primario);
+    font-size: 36px;
+}
+.content-image{
+    display: flex;
+    width: 80%;
+    margin: auto;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.content-image .imagen{
+    width: 30%;
+    position: relative;
+    height: 250px;
+    margin: 5px;
+    box-shadow: 0px 0px 3px 0px rgb(0, 0, 0);
+}
+.imagen img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.overlay{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    transition: 600ms ease;
+}
+.overlay h2{
+    background-color: transparent;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    color: var(--primario);
+}
+.overlay p{
+    background-color: transparent;
+    font-size: 20px;
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+.imagen:hover .overlay{
+    height: 50%;
+    cursor: pointer;
+}
+
+
+.news{
+    background-image:linear-gradient(to left, rgba(0,0,0,0.6), rgba(0,0,0,0.3)),url(../images/fondo_cotact2.jpg);
+    object-fit: cover;
+    background-position: center;
+}
+.news_content{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 6rem;
+}
+.news_text h2{
+    font-size: 30px;
+    color: var(--blanco);
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+.news_text p{
+    font-size: 14px;
+    line-height: 26px;
+    color: var(--blanco);
+}
+.news_content form{
+    display: grid;
+    grid-template-columns: 1fr 0.4fr;
+    gap: 1;
+}
+.news_content form input:first-child{
+    font-size: 14px;
+    background-color: transparent;
+    padding: 15px;
+    border-radius: 5px 0px 0px 5px;
+    border-top: 1px solid var(--blanco);
+    border-left: 1px solid var(--blanco);
+    border-bottom: 1px solid var(--blanco);
+    color: #fff;
+}
+.news_content form input::placeholder{
+    color: rgb(255, 254, 254);
+}
+footer{
+    background-color: var(--secundario);
+    color: var(--blanco);
+    padding: 8px 17%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,auto));
+    align-items: center;
+    gap: 3rem;
+}
+.footer_box{
+    display: flex;
+    flex-direction: column;
+    height: 180px;
+}
+.footer_box h3{
+    font-size: 20px;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+.footer_box a{
+    color: #979797;
+    margin-bottom: .7rem;
+    transition: all .50s ease;
+}
+.footer_box a:hover{
+    color: var(--blanco);
+    transform: translateX(10px);
+}
+.social a{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    width: 45px;
+    background-color: var(--gris);
+    border-radius: 5px;
+    margin-right: 6px;
+    transition: transform .6s;
+}
+.social a:hover{
+    font-size: 24px;
+    background-color: var(--primario);
+    transform: translateX(10px);
+}
+.copyright{
+    background-color: black;
+    color: var(--blanco);
+}
+.copyright p{
+    padding: 20px;
+    text-align: center;
+}
+/*Media Queries*/
+@media(max-width:1700px){
+    header{
+        padding: 18px 8%;
+    }
+    header.sticky{
+        padding: 7px 8%;
+    }
+    section{
+        padding: 50px 8% 40px;
+    }
+}
+@media(max-width:1200px){
+    header{
+        padding: 14px 5%;
+    }
+    header.sticky{
+        padding: 7px 5%;
+    }
+    section{
+        padding: 45px 5% 35px;
+    }
+    .home{
+        height: 90vh;
+    }
+}
+@media(max-width:1050px){
+    .content{
+        gap: 1.5rem;
+    }
+    .about, .to_sell{
+        gap: 3rem;
+    }
+    #menu-icon{
+        display: block;
+        color: var(--blanco);
+    }
+    .navbar{
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        backdrop-filter: blur(50px);
+        padding: 40px 60px;
+        top: 0;
+        bottom: 0;
+        left: 100%;
+        display: flex;
+        flex-direction: column;
+        transition: all .5s ease;
+    }
+    .navbar a{
+        display: block;
+        color: var(--blanco);
+        padding: 0;
+        margin: 0px 0px 40px 0px;
+        font-size: 1.2rem;
+    }
+    .navbar.open{
+        left: 0;
+    }
+}
+@media(max-width:800px){
+    .about, .to_sell, .news_content{
+        grid-template-columns: 1fr;
+    }
+}
+@media(max-width:600px){
+    .home{
+        height: 80vh;
+    }
+}
+@media(max-width:450px){
+    header{
+        padding: 12px 3%;
+    }
+    header.sticky{
+        padding: 7px 3%;
+    }
+    section{
+        padding: 60px 3% 50px;
+    }
+}
