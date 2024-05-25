@@ -8,10 +8,49 @@
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="../public/plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="./public/plugins/fontawesome-free/css/all.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="../public/dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="./public/dist/css/adminlte.min.css">
 </head>
+<style>
+    .dashboard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card {
+    width: 250px;
+    background-color: #F9411A;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.card h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.card .more-info {
+    display: block;
+    text-align: center;
+    color: #333;
+    text-decoration: none;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+</style>
 <body class="hold-transition sidebar-mini">
 <!-- Site wrapper -->
 <div class="wrapper">
@@ -41,7 +80,7 @@
       <!-- Sidebar user (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="../images/fot_perfil.jpeg" class="img-circle elevation-2" alt="User Image">
+          <img src="./images/fot_perfil.jpeg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
           <a href="#" class="d-block">Juan Andres</a>
@@ -63,7 +102,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="../../index.html" class="nav-link">
+                <a href="./index.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Dashboard v1</p>
                 </a>
@@ -96,41 +135,34 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Blank Page</h1>
+            <h1>INICIO</h1>
           </div>
         </div>
       </div><!-- /.container-fluid -->
     </section>
-
-    <!-- Main content -->
-    <section class="content">
-
-      <!-- Default box -->
-      <div class="card">
-        <div class="card-header">
-          <h3 class="card-title">Title</h3>
-
-          <div class="card-tools">
-            <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-              <i class="fas fa-minus"></i>
-            </button>
-            <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
-              <i class="fas fa-times"></i>
-            </button>
-          </div>
-        </div>
-        <div class="card-body">
-          Start creating your amazing application!
-        </div>
-        <!-- /.card-body -->
-        <div class="card-footer">
-          Footer
-        </div>
-        <!-- /.card-footer-->
-      </div>
-      <!-- /.card -->
-
-    </section>
+    <section class="dashboard">
+        
+            <div class="card">
+                <h2>Nuevos pedidos</h2>
+                <p>150</p>
+                <a href="#" class="more-info">Más información</a>
+            </div>
+            <div class="card">
+                <h2>Tasa de rebote</h2>
+                <p>53%</p>
+                <a href="#" class="more-info">Más información</a>
+            </div>
+            <div class="card">
+                <h2>Registros de usuarios</h2>
+                <p>44</p>
+                <a href="#" class="more-info">Más información</a>
+            </div>
+            <div class="card">
+                <h2>Visitantes únicos</h2>
+                <p>65</p>
+                <a href="#" class="more-info">Más información</a>
+            </div>
+        </section>
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
@@ -151,12 +183,12 @@
 <!-- ./wrapper -->
 
 <!-- jQuery -->
-<script src="../public/plugins/jquery/jquery.min.js"></script>
+<script src="./public/plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
-<script src="../public/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="./public/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->
-<script src="../public/dist/js/adminlte.min.js"></script>
+<script src="./public/dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
-<script src="../public/dist/js/demo.js"></script>
+<script src="./public/dist/js/demo.js"></script>
 </body>
 </html>

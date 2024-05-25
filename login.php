@@ -1,9 +1,19 @@
+<?php 
+  /*todo: llamado cadena de conexion */
+  require_once("config/conexion.php");
+    if(isset($_POST["enviar"]) and $_POST["enviar"]=="si"){
+      require_once("models/uuario.php");
+      /*todo: inicializado clase */
+      $usuario = new Usuario();
+      $usuario->login();
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AdminLTE 3 | Log in</title>
+  <title>PORTAFOLIO | Log in</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -17,7 +27,7 @@
 <body class="hold-transition login-page">
 <div class="login-box">
   <div class="login-logo">
-    <a href="../../index2.html"><b>Admin</b>LTE</a>
+    <a href="../../index2.html"><b>PORTA</b>FOLIO</a>
   </div>
   <!-- /.login-logo -->
   <div class="card">
@@ -57,7 +67,26 @@
           <!-- /.col -->
         </div>
       </form>
-
+      <?php
+        if(isset($_GET["m"])){
+          switch($_GET["m"]){
+            case "1";
+              ?>
+              <div class="alert alert-danger" role="alert">
+                los datos ingresados son incorrectos!!
+              </div>
+              <?php
+              break;
+            case "2";
+              ?>
+                <div class="alert alert-warning" role="alert">
+                  el formulario tiene los campos vacios!!
+                </di>
+              <?php
+              break;
+          }
+        }
+      ?>
       
       <!-- /.social-auth-links -->
 
