@@ -33,8 +33,27 @@
   <div class="card">
     <div class="card-body login-card-body">
       <p class="login-box-msg">Sign in to start your session</p>
-
       <form action="../../index3.html" method="post">
+      <?php
+        if(isset($_GET["m"])){
+          switch($_GET["m"]){
+            case "1";
+              ?>
+              <div class="alert alert-danger" role="alert">
+                los datos ingresados son incorrectos!!
+              </div>
+              <?php
+              break;
+            case "2";
+              ?>
+                <div class="alert alert-warning" role="alert">
+                  el formulario tiene los campos vacios!!
+                </di>
+              <?php
+              break;
+          }
+        }
+      ?>
         <div class="input-group mb-3">
           <input type="email" class="form-control" placeholder="Email">
           <div class="input-group-append">
@@ -67,29 +86,6 @@
           <!-- /.col -->
         </div>
       </form>
-      <?php
-        if(isset($_GET["m"])){
-          switch($_GET["m"]){
-            case "1";
-              ?>
-              <div class="alert alert-danger" role="alert">
-                los datos ingresados son incorrectos!!
-              </div>
-              <?php
-              break;
-            case "2";
-              ?>
-                <div class="alert alert-warning" role="alert">
-                  el formulario tiene los campos vacios!!
-                </di>
-              <?php
-              break;
-          }
-        }
-      ?>
-      
-      <!-- /.social-auth-links -->
-
       <p class="mb-1">
         <a href="forgot-password.html">I forgot my password</a>
       </p>
