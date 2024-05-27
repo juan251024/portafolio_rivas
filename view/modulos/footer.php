@@ -1,10 +1,8 @@
-<?php
-define("BASE_URL","/portafolio/view/");
-require_once("../config/conexion.php");
-if(isset($_SESSION["usu_id"]))
+
 ?>
-<?php
-{else {
-    header("Location:".conectar::ruta()."view/404.php");
-}}
-?>
+  <footer class="main-footer">
+    <div class="float-right d-none d-sm-block">
+      <b>Version</b> 3.2.0
+    </div>
+    <strong>Copyright &copy; 2024 <a href="https://adminlte.io">Juan Andres Rivas</a>.</strong> my portafolio.
+  </footer>

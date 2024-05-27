@@ -33,7 +33,7 @@
   <div class="card">
     <div class="card-body login-card-body">
       <p class="login-box-msg">Sign in to start your session</p>
-      <form action="../../index3.html" method="post">
+      <form action="./view/dashboard.php" method="post">
       <?php
         if(isset($_GET["m"])){
           switch($_GET["m"]){
