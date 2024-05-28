@@ -1,9 +1,14 @@
+<?php
+define("BASE_URL","/portafolio/view");
+require_once("../config/conexion.php");
+if(isset($_SESSION["usu_id"])){
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AdminLTE 3 | Blank Page</title>
+  <title>PORTAFOLIO | Blank PAGE</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -81,3 +86,8 @@
 <script src="../public/dist/js/demo.js"></script>
 </body>
 </html>
+<?php
+  }else{
+    header("location:".conectar::ruta()."view/404.php");
+  }
+?>

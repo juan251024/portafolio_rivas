@@ -25,7 +25,7 @@
                     header("Location".conectar::ruta()."views/inicio.php");
                     exit(;)
                 }else{
-                    header("Location:".conectar::ruta()."index.php?=!");
+                    header("Location:".conectar::ruta()."index.php?=1");
                     exit();
                 }
                 

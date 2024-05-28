@@ -1,3 +1,8 @@
+<?php
+define("base_url";"/portafolio/view");
+require_once("../config/conexion.php");
+if(isset($_SESSION["usu_id"]))
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -56,3 +61,8 @@
 <script src="../public/dist/js/demo.js"></script>
 </body>
 </html>
+<?php
+  {else{
+    header("Location:".conectar::ruta()."view/404.php");
+  }}
+?>
